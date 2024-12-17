@@ -1,0 +1,90 @@
+{% extends 'account/user_profile.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    form {
+        max-width: 600px; /* Sets a maximum width for the form */
+        margin: 20px auto; /* Centers the form on the page */
+        padding: 20px; /* Adds padding inside the form */
+        border: 1px solid #ccc; /* Light gray border around the form */
+        border-radius: 8px; /* Rounds the corners of the form */
+        background-color: #f9f9f9; /* Light background color */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    .form-group {
+        margin-bottom: 15px; /* Space between form groups */
+    }
+
+    label {
+        display: block; /* Makes labels block elements */
+        margin-bottom: 5px; /* Space between label and input */
+        font-weight: bold; /* Makes label text bold */
+        color: #333; /* Darker text color for labels */
+    }
+
+    .form-control {
+        width: 100%; /* Full width for input fields */
+        padding: 10px; /* Padding inside input fields */
+        border: 1px solid #ccc; /* Light gray border for input fields */
+        border-radius: 4px; /* Rounds the corners of input fields */
+        box-sizing: border-box; /* Ensures padding is included in width */
+        transition: border-color 0.3s; /* Smooth transition for border color */
+    }
+
+    .form-control:focus {
+        border-color: #007bff; /* Blue border on focus */
+        outline: none; /* Removes default outline */
+    }
+
+    .btn {
+        padding: 10px 15px; /* Padding for buttons */
+        border: none; /* Removes default border */
+        border-radius: 4px; /* Rounds the corners of buttons */
+        cursor: pointer; /* Changes cursor to pointer on hover */
+        font-size: 16px; /* Increases font size for buttons */
+    }
+
+    .btn-primary {
+        background-color: #007bff; /* Bootstrap primary color */
+        color: white; /* White text for contrast */
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+</style>
+
+<h2 style="text-align: center;">Edit Contact</h2>
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{ contact.name }}" required>
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" value="{{ contact.email }}" required>
+    </div>
+    <div class="form-group">
+        <label for="Phone">Phone Number</label>
+        <input type="text" class="form-control" id="phone" name="phone" value="{{ contact.phone }}" required>
+    </div>
+    <div class="form-group">
+        <label for="Address">Address</label>
+        <input type="text" class="form-control" id="address" name="address" value="{{ contact.address }}" required>
+    </div>
+    <div class="form-group">
+        <label for="contact_type">Contact Type</label>
+        <select class="form-control" id="contact_type" name="contact_type" required>
+            <option value="personal" {% if contact.contact_type == 'personal' %}selected{% endif %}>Personal</option>
+            <option value="work" {% if contact.contact_type == 'work' %}selected{% endif %}>Work</option>
+            <option value="other" {% if contact.contact_type == 'other' %}selected{% endif %}>Other</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Save changes</button>
+</form>
+{% endblock %}
+

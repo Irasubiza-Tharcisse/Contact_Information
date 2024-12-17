@@ -1,0 +1,38 @@
+{% extends 'account/admin_profile.html' %}
+
+
+
+{% block content %}
+
+<!-- Edit User Modal -->
+
+                <form id="editUserForm" method="post" >
+                    {% csrf_token %}
+
+
+                    <div class="form-group">
+                        <label for="userName">UserName</label>
+                        <input type="text" class="form-control" id="userName" name="username" value="{{ user.username }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userFName">First Name</label>
+                        <input type="text" class="form-control" id="userFName" name="first_name" value="{{ user.first_name }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userLName">Last Name</label>
+                        <input type="text" class="form-control" id="userLName" name="last_name" value="{{ user.last_name }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">Email</label>
+                        <input type="email" class="form-control" id="userEmail" name="email" value="{{ user.email }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userPassword">Change password</label>
+                        <input type="password" class="form-control" id="userEmail" name="password" value="{{ user.password }}" required>
+                    </div>
+                    <input type="hidden" id="userId" name="user_id" value="{{ user.id }}">
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </form>
+           
+
+{% endblock %}

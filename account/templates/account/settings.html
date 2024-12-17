@@ -1,0 +1,24 @@
+{% extends 'account/user_profile.html' %}
+{% load static %}
+{% block title %} My Settings {% endblock %}
+{% block content %}
+<div class="profile-overview" style="margin-top: 40px; text-align: center;">
+    <h2>Your Profile Overview</h2>
+    <p>Here’s a quick summary of your profile:</p>
+    <ul style="list-style-type: none; padding: 0;">
+        <li><strong>Username:</strong> {{ username }}</li>
+        <li><strong>Email:</strong> {{ email }}</li>
+        <li><strong>FirstName:</strong> {{ first_name }}</li>
+        <li><strong>LastName:</strong> {{ last_name }}</li><br><br>
+        <li>
+          <a href="{% url 'edit_user' user.id %}"  class="btn btn-warning btn-sm" id="editUserButton" onclick="return confirm('Are you sure you want to edit this user?');">Edit</a>
+
+          <a href="{% url 'delete_user' user.id %}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete your account?');">Delete</a>
+        </li>
+    </ul>
+</div>
+
+{% endblock %}
+
+    
+  

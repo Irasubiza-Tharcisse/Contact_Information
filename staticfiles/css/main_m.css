@@ -1,0 +1,200 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    overflow: auto;
+    background-color: #000000;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.cont{
+    height: 100vh;
+   flex-grow: 1;
+   display: flex;
+   box-sizing: border-box;
+   animation: change 10s ease infinite;
+  
+}
+.cont a{
+    text-decoration: none;
+    color: white;
+}
+@keyframes change{
+    0%{
+     background-image: url("https://imgs.search.brave.com/NuanP1JdIy0_mtEtfh1w3bSpm0hDqgUACznHuussgJ8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9wdWIt/c3RhdGljLmZvdG9y/LmNvbS9hc3NldHMv/YmcvMjFjYTczODgt/NjdmNC00MzcyLWE0/OTItODQ5MDNjYjA2/ZDljLmpwZw");
+     background-position: center;
+     background-size: cover;
+    }
+    50%{
+        background-image: url("https://imgs.search.brave.com/iZ4yb3nomTY_kq-_UqVKf7xVMWstNAXryJE2qeXRXBg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzM2LzkwLzAw/LzM2MF9GXzIzNjkw/MDA4OF9JUjJNTW1H/TlBrRkZJaDJMQmJE/ZnNrNVU2RVlpcjBV/MC5qcGc");
+        background-position: center;
+        background-size: cover;
+    }
+    100%{
+        background-image: url("https://imgs.search.brave.com/K9FXPTXexJPwnMFvCrKFfF_5ab1nKor_Gif5I5E6gqM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9wdWIt/c3RhdGljLmZvdG9y/LmNvbS9hc3NldHMv/YmcvZThlNjZkNDkt/ZGVhMS00MmVjLTg5/Y2QtMTViNmU3Mzcz/ODZlLmpwZw");
+        background-position: center;
+        background-size: cover;
+    }
+}
+.cont aside{
+    width: 20%;
+    background-color: rgb(85, 67, 54);
+    display: grid;
+    text-align:left;
+    justify-content:center;
+    align-items: center;
+    text-wrap: wrap;
+    margin: 5px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    word-wrap: break-word;
+}
+
+.cont aside nav{
+padding: 10px;
+}
+.cont aside nav ul li{
+    padding: 30px;
+    list-style-type: none;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-wrap: wrap;
+    cursor: pointer;
+}
+.cont section{
+    flex-grow: 1;
+    justify-content: space-between;
+    display: block;
+    
+}
+.cont section .contents{
+    flex-grow:1;
+    margin: 5px;
+    background-color: rgb(186, 196, 199);
+    height:max-content;
+    height: 81%;
+    border-radius: 10px;
+}
+.cont section .contents a{
+    color: #079cf9;
+}
+.cont section header{
+    background-color: #079cf9;
+    padding: 20px;
+    height: 10%;
+    margin: 5px;
+    border-radius: 10px;
+    color: white;
+}
+footer{
+    text-align: center;
+color: white;
+display: flex;
+justify-content: center;
+border-radius: 10px;
+}
+
+
+
+.contents{
+    background-image: url("https://imgs.search.brave.com/VSQOTbUKDmKY9xM1JNznChI1J8McUYoRE6EPjYEG4iU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzU0Lzk3Lzkw/LzM2MF9GXzI1NDk3/OTA3N19mVDhtWlJp/MlZxcG81aGg2QTRS/QXI5c0RXV2h0czE3/Ty5qcGc");
+    background-position: center;
+    background-size: cover;
+}
+#newContact{
+    display: grid;
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #000;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.topnav{
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+form {
+    max-width: 600px; /* Sets a maximum width for the form */
+    margin: 20px auto; /* Centers the form on the page */
+    padding: 20px; /* Adds padding inside the form */
+    border: 1px solid #ccc; /* Light gray border around the form */
+    border-radius: 8px; /* Rounds the corners of the form */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    display: block; /* Makes labels block elements */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Makes label text bold */
+    color: #333; /* Darker text color for labels */
+}
+
+.form-control {
+    width: 100%; /* Full width for input fields */
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Light gray border for input fields */
+    border-radius: 4px; /* Rounds the corners of input fields */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Removes default outline */
+}
+
+.btn {
+    padding: 10px 15px; /* Padding for buttons */
+    border: none; /* Removes default border */
+    border-radius: 4px; /* Rounds the corners of buttons */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-size: 16px; /* Increases font size for buttons */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text for contrast */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

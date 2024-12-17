@@ -1,0 +1,46 @@
+.table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are collapsed */
+    margin: 20px 0; /* Adds some space above and below the table */
+}
+
+.table th, .table td {
+    border: 1px solid #ddd; /* Light gray border for table cells */
+    padding: 12px; /* Adds padding inside cells */
+    text-align: left; /* Aligns text to the left */
+}
+
+.table th {
+    background-color: #f2f2f2; /* Light gray background for header */
+    color: #333; /* Darker text color for header */
+    font-weight: bold; /* Makes header text bold */
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for even rows */
+}
+
+.table tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+.btn {
+    padding: 5px 10px; /* Adds padding to buttons */
+    border: none; /* Removes default border */
+    border-radius: 4px; /* Rounds the corners of buttons */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Bootstrap warning color */
+    color: white; /* White text for contrast */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Bootstrap danger color */
+    color: white; /* White text for contrast */
+}
+
+.btn:hover {
+    opacity: 0.8; /* Slightly transparent on hover */
+}

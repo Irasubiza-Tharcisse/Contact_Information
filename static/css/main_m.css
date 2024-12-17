@@ -1,0 +1,195 @@
+/* Custom styles for the user profile page */
+body {
+    font-family: Arial, sans-serif; /* Sets a clean font for the body */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    background-color: #f8f9fa; /* Light background color for the body */
+}
+
+.cont {
+    display: flex; /* Enables flexbox layout for the main container */
+    min-height: 100vh; /* Ensures the container takes at least full viewport height */
+}
+
+aside {
+    width: 250px; /* Fixed width for the sidebar */
+    background-color: #2b1c0d; /* Dark background color */
+    border-right: 1px solid #dee2e6; /* Subtle border on the right */
+    padding: 20px; /* Padding for spacing */
+    height: 100vh; /* Full height of the viewport */
+    position: fixed; /* Fixed position to stay in view */
+    overflow-y: auto; /* Scroll if content overflows */
+}
+
+aside div {
+    text-align: center; /* Center the username */
+    margin-bottom: 20px; /* Space below the username */
+}
+
+aside nav ul {
+    list-style-type: none; /* Remove default list styling */
+    padding-top: 20px;
+}
+
+aside nav ul li {
+    margin: 15px 0; /* Space between list items */
+    padding-top: 10px;
+}
+
+aside nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Link color */
+    font-weight: bold; /* Bold text for links */
+    display: flex; /* Flexbox for icon and text alignment */
+    align-items: center; /* Center items vertically */
+}
+
+aside nav ul li a:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+
+aside nav ul li a i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2em; /* Slightly larger icons */
+}
+
+section {
+    flex-grow: 1; /* Allows the section to take up remaining space */
+    padding: 20px; /* Padding around the section */
+    margin-left: 250px; /* Offset for the fixed sidebar */
+}
+
+header {
+    margin-bottom: 20px; /* Space below the header */
+    background-color: #1d2a54; /* Header background color */
+    color: white;
+    width: calc(100% - 0px); /* Full width minus sidebar */
+    padding-left: 50px; /* Offset for the fixed sidebar */;
+    height: 200px;
+}
+
+#content_1 {
+    background-color: white; /* White background for content area */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding for content */
+}
+
+footer {
+    text-align: center; /* Center footer text */
+    padding: 10px; /* Padding for footer */
+    background-color: #343a40; /* Dark background for footer */
+    color: white; /* White text color */
+    position: relative; /* Position relative for footer */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+}
+
+/* Profile styles */
+.welcome-message {
+    background-color: #e9f7fe; /* Light blue background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 30px; /* Padding for spacing */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Center the message */
+    max-width: 600px; /* Maximum width for the message */
+}
+
+.welcome-message h1 {
+    color: #007bff; /* Bootstrap primary color */
+    font-size: 2.5em; /* Larger font size for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.welcome-message p {
+    color: #333; /* Darker text for readability */
+    font-size: 1.1em; /* Slightly larger font size */
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Bootstrap primary button color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 1.1em; /* Font size for button text */
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.profile-overview {
+    background-color: #ffffff; /* White background for profile overview */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding for spacing */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Center the overview */
+    max-width: 600px; /* Maximum width for the overview */
+}
+
+.profile-overview h2 {
+    color: #343a40; /* Darker color for the heading */
+    font-size: 2em; /* Font size for the heading */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.profile-overview ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.profile-overview ul li {
+    font-size: 1.1em; /* Font size for list items */
+    color: #555; /* Slightly lighter color for list items */
+    margin: 10px 0; /* Space between list items */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cont {
+        flex-direction: column; /* Stack sidebar and content on smaller screens */
+    }
+
+    aside {
+        position: relative; /* Change to relative for smaller screens */
+        width: 100%; /* Full width for sidebar */
+        height: auto; /* Allow height to adjust */
+    }
+
+    section {
+        margin-left: 0; /* Remove left margin for section */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    header {
+        width: 100%; /* Full width for header */
+      
+    }
+}
+
+/* footer developers */
+.front-end-link {
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Bootstrap primary color */
+    font-weight: bold; /* Bold text for emphasis */
+    font-size: 1.2em; /* Slightly larger font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.front-end-link:hover {
+    color: #0056b3; /* Darker shade on hover */
+}
+
+.back-end-link {
+    text-decoration: none; /* Remove underline from links */
+    color: #28a745; /* Different color for back-end link */
+    font-weight: bold; /* Bold text for emphasis */
+    font-size: 1.2em; /* Slightly larger font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.back-end-link:hover {
+    color: #218838; /* Darker shade on hover */
+}

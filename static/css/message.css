@@ -1,0 +1,48 @@
+/* Base styles for the messages list */
+.messages {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Individual message styles */
+.messages li {
+    padding: 15px; /* Add padding for comfort */
+    margin-bottom: 10px; /* Space between messages */
+    border-radius: 5px; /* Rounded corners */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Font size */
+}
+
+/* Success message */
+.messages li.success {
+    background-color: #28a745; /* Green background */
+}
+
+/* Error message */
+.messages li.error {
+    background-color: #dc3545; /* Red background */
+}
+
+/* Warning message */
+.messages li.warning {
+    background-color: #ffc107; /* Yellow background */
+    color: #212529; /* Dark text for contrast */
+}
+
+/* Info message */
+.messages li.info {
+    background-color: #17a2b8; /* Blue background */
+}
+
+/* Optional: Add a fade-in effect */
+.messages li {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

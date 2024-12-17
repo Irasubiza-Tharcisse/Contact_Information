@@ -1,0 +1,12 @@
+{% extends 'account/user_profile.html' %}
+{% load static %}
+{% block content %}
+<h2>Delete Contact</h2>
+<p>Are you sure you want to delete contact for {{ contact.name }}?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="{% url 'all_contacts' %}" class="btn btn-secondary">Cancel</a>
+</form>
+
+{% endblock %}

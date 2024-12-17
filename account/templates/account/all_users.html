@@ -1,0 +1,55 @@
+{% extends 'account/admin_profile.html' %}
+{% block title %}users management {% endblock %}
+{% block content %}
+<body>
+    <div class="container mt-5">
+        <h2>User Management</h2>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }} </li>
+               {% endfor %}
+            </ul>
+        {% endif %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User Name</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userTable">
+                {% if users %}
+                    {% for user in users %}
+                <tr>
+                    <td id="userId">{{ user.id }}</td>
+                    <td id="userName">{{ user.username }}</td>
+                    <td id="userFName">{{ user.first_name }}</td>
+                    <td id="userLName"> {{ user.last_name }}</td>
+                    <td id="userEmail">{{ user.email }}</td>
+                    
+                    <td>
+                         <a href="{% url 'edit_user' user.id %}"  class="btn btn-warning btn-sm" id="editUserButton" onclick="return confirm('Are you sure you want to edit this user?');">Edit</a>
+                        
+                        <a href="{% url 'delete_user' user.id %}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
+                    
+                    </td>
+                </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="4">No users found.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+    
+  
+   
+{% endblock %}
